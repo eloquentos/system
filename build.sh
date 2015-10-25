@@ -264,8 +264,6 @@ for arch in i686 x86_64; do
     run_once make_boot
 done
 
-# TODO: Here is where we'll remove cheese
-
 # Do all stuff for "iso"
 run_once make_boot_extra
 run_once make_syslinux

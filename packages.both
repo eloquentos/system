@@ -1,3 +1,14 @@
+wine
+wine-mono
+wine_gecko
+cups
+xorg
+virtualbox-guest-utils
+gdm
+gnome-shell
+gnome-online-accounts
+gnome-initial-setup
+gnome-backgrounds
 b43-fwcutter
 btrfs-progs
 clonezilla

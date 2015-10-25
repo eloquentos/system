@@ -8,6 +8,13 @@ gdm
 gnome-shell
 gnome-online-accounts
 gnome-initial-setup
+nautilus
+gnome-user-docs
+cheese
+gnome-keyring
+gnome-bluetooth
+gnome-control-center
+file-roller
 gnome-backgrounds
 b43-fwcutter
 btrfs-progs

@@ -2,10 +2,10 @@
 
 set -e -u
 
-iso_name=archlinux
-iso_label="ARCH_$(date +%Y%m)"
+iso_name=eloquentos
+iso_label="ELOQUENTOS_$(date +%Y%m)"
 iso_version=$(date +%Y.%m.%d)
-install_dir=arch
+install_dir=eloquent
 work_dir=work
 out_dir=out
 

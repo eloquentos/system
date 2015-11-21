@@ -1,3 +1,22 @@
+# Included apps
+gnome-calculator
+gnome-calendar
+gnome-contacts
+gnome-disk-utility
+gnome-documents
+gnome-font-viewer
+seahorse
+gnome-logs
+gnome-maps
+gnome-music
+gnome-photos
+gnome-power-manager
+gnome-system-log
+gnome-system-monitor
+gnome-terminal
+gnome-weather
+
+# Base
 wine
 wine-mono
 wine_gecko
@@ -17,6 +36,7 @@ gnome-control-center
 file-roller
 gnome-backgrounds
 
+# System
 b43-fwcutter
 btrfs-progs
 clonezilla

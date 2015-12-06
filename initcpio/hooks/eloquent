@@ -3,5 +3,5 @@
 run_latehook() {
     umount /new_root
     mount -o remount,rw /run/archiso/img_dev
-    mount -t overlay -o lowerdir=/run/archiso/sfs/root-image,upperdir=/run/archiso/img_dev/eloquent,workdir=/run/archiso/img_dev/work overlay /new_root
+    mount -t overlay -o lowerdir=/run/archiso/sfs/airootfs,upperdir=/run/archiso/img_dev/eloquent,workdir=/run/archiso/img_dev/work overlay /new_root
 }

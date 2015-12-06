@@ -3,30 +3,30 @@
 run_latehook() {
     mount -o remount,rw /run/archiso/img_dev
 
-    mkdir /Media
-    mkdir /Media/Eloquent\ OS
-    mkdir /System
-    mkdir /Settings
-    mkdir /Library
-    mkdir /Library/Apps
-    mkdir /Users
-    mkdir /Apps
+    mkdir /new_root/Media
+    #mkdir /Media/Eloquent\ OS
+    mkdir /new_root/System
+    mkdir /new_root/Settings
+    mkdir /new_root/Library
+    mkdir /new_root/Library/Apps
+    mkdir /new_root/Users
+    mkdir /new_root/Apps
     ​
-    mount --move /run/archiso/img_dev /Media/Eloquent\ OS
+    #mount --move /run/archiso/img_dev /Media/Eloquent\ OS
 
-    mount —bind /Media/Eloquent\ OS/System /System
+    mount --bind /run/archiso/img_dev/System /new_root/System
 
-    mount —bind /Media/Eloquent\ OS/Settings /Settings
+    mount --bind /run/archiso/img_dev/Settings /new_root/Settings
 
-    mount —bind /Media/Eloquent\ OS/Library /Library
+    mount --bind /run/archiso/img_dev/Library /new_root/Library
 
-    mount --bind /Media/Eloquent\ OS/Users /Users
+    mount --bind /run/archiso/img_dev/Users /new_root/Users
 
-    mount --bind /Media/Eloquent\ OS/Apps /Apps
+    mount --bind /run/archiso/img_dev/Apps /new_root/Apps
 
-    mount -t overlay -o lowerdir=/etc,upperdir=/Media/Eloquent\ OS/Settings,workdir=/Media/Eloquent\ OS/Work/Settings overlay /etc
+    mount -t overlay -o lowerdir=/run/archiso/sfs/airootfs/etc,upperdir=/run/archiso/img_dev/Settings,workdir=/run/archiso/img_dev/Work/Settings overlay /new_root/etc
 
-    mount -t overlay -o lowerdir=/var,upperdir=/Media/Eloquent\ OS/System/Data,workdir=/Media/Eloquent\ OS/Work/System/Data overlay /var
+    mount -t overlay -o lowerdir=/run/archiso/sfs/airootfs/var,upperdir=/run/archiso/img_dev/System/Data,workdir=/run/archiso/img_dev/Work/System/Data overlay /new_root/var
 
-    mount -t overlay -o lowerdir=/usr/share/applications,upperdir=/Media/Eloquent\ OS/Library/Apps,workdir=/Media/Eloquent\ OS/Work/Library/Apps overlay /usr/share/applications
+    mount -t overlay -o lowerdir=/run/archiso/sfs/airootfs/usr/share/applications,upperdir=/run/archiso/img_dev/Library/Apps,workdir=/run/archiso/img_dev/Work/Library/Apps overlay /new_root/usr/share/applications
 }

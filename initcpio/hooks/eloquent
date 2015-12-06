@@ -1,7 +1,32 @@
 #!/usr/bin/ash
 
 run_latehook() {
-    umount /new_root
     mount -o remount,rw /run/archiso/img_dev
-    mount -t overlay -o lowerdir=/run/archiso/sfs/airootfs,upperdir=/run/archiso/img_dev/eloquent,workdir=/run/archiso/img_dev/work overlay /new_root
+
+    mkdir /Media
+    mkdir /Media/Eloquent\ OS
+    mkdir /System
+    mkdir /Settings
+    mkdir /Library
+    mkdir /Library/Apps
+    mkdir /Users
+    mkdir /Apps
+    ​
+    mount --move /run/archiso/img_dev /Media/Eloquent\ OS
+
+    mount —bind /Media/Eloquent\ OS/System /System
+
+    mount —bind /Media/Eloquent\ OS/Settings /Settings
+
+    mount —bind /Media/Eloquent\ OS/Library /Library
+
+    mount --bind /Media/Eloquent\ OS/Users /Users
+
+    mount --bind /Media/Eloquent\ OS/Apps /Apps
+
+    mount -t overlay -o lowerdir=/etc,upperdir=/Media/Eloquent\ OS/Settings,workdir=/Media/Eloquent\ OS/Work/Settings overlay /etc
+
+    mount -t overlay -o lowerdir=/var,upperdir=/Media/Eloquent\ OS/System/Data,workdir=/Media/Eloquent\ OS/Work/System/Data overlay /var
+
+    mount -t overlay -o lowerdir=/usr/share/applications,upperdir=/Media/Eloquent\ OS/Library/Apps,workdir=/Media/Eloquent\ OS/Work/Library/Apps overlay /usr/share/applications
 }

@@ -4,5 +4,5 @@ HOME=/Users
 INACTIVE=-1
 EXPIRE=
 SHELL=/bin/bash
-SKEL=/etc/skel
+SKEL=/Library/Users/Template
 CREATE_MAIL_SPOOL=no

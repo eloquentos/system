@@ -4,6 +4,7 @@ arch:
   packages:
     - archiso
   script:
+    - "sudo pacman-key --init"
     - "sudo ./build.sh -v"
 
 script:

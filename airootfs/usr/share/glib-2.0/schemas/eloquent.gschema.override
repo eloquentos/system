@@ -1,0 +1,7 @@
+[org.gnome.nautilus.desktop]
+trash-icon-visible=false
+volumes-visible=false
+home-icon-visible=false
+
+[org.gnome.desktop.background]
+show-desktop-icons=true

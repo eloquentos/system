@@ -5,7 +5,6 @@ gnome-contacts
 gnome-disk-utility
 gnome-documents
 gnome-font-viewer
-seahorse
 gnome-logs
 gnome-maps
 gnome-music
@@ -17,6 +16,7 @@ gnome-weather
 gnome-getting-started-docs
 totem
 bijiben
+seahorse
 
 # Base
 xdg-user-dirs

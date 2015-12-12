@@ -13,7 +13,6 @@ gnome-system-log
 gnome-system-monitor
 gnome-terminal
 gnome-weather
-gnome-getting-started-docs
 totem
 bijiben
 seahorse
@@ -29,6 +28,7 @@ virtualbox-guest-utils
 gdm
 gnome-shell
 gnome-online-accounts
+gnome-getting-started-docs
 gnome-initial-setup
 nautilus
 gnome-user-docs

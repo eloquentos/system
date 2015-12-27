@@ -14,3 +14,5 @@ sudo ./build.sh -v
 ```
 
 The newly build ISO will be built into the ```out``` directory.
+
+Note: Chances are, the built ISO will not be bootable by itself. The ISO is designed to be loop-mounted with GRUB and overlayed with directories on the hard disk in our initramfs.

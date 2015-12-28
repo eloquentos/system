@@ -5,3 +5,9 @@ home-icon-visible=false
 
 [org.gnome.desktop.background]
 show-desktop-icons=true
+
+[org.gnome.desktop.interface]
+gtk-theme=Eloquent
+
+[org.gnome.shell.extensions.user-theme]
+name=Eloquent

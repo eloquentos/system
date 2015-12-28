@@ -6,6 +6,9 @@ home-icon-visible=false
 [org.gnome.desktop.background]
 show-desktop-icons=true
 
+[org.gnome.desktop.wm.preferences]
+button-layout=":minimize,maximize,close"
+
 [org.gnome.desktop.interface]
 gtk-theme=Eloquent
 

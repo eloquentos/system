@@ -31,6 +31,7 @@ xorg
 virtualbox-guest-utils
 gdm
 gnome-shell
+gnome-shell-extensions
 gnome-online-accounts
 gnome-getting-started-docs
 gnome-initial-setup

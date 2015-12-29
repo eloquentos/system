@@ -10,7 +10,7 @@ show-desktop-icons=true
 button-layout=":minimize,maximize,close"
 
 [org.gnome.desktop.interface]
-gtk-theme=Eloquent
+gtk-theme="Eloquent"
 
 [org.gnome.shell.extensions.user-theme]
-name=Eloquent
+name="Eloquent"

@@ -14,3 +14,6 @@ gtk-theme="Eloquent"
 
 [org.gnome.shell.extensions.user-theme]
 name="Eloquent"
+
+[org.gnome.shell]
+enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'nohotcorner@azuri.free.fr', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']

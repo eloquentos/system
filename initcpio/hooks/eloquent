@@ -11,6 +11,7 @@ run_latehook() {
     mkdir /new_root/Library/Apps
     mkdir /new_root/Users
     mkdir /new_root/Apps
+    mkdir /new_root/Extensions
     ​
     #mount --move /run/archiso/img_dev /Media/Eloquent\ OS
 
@@ -23,6 +24,8 @@ run_latehook() {
     mount --bind /run/archiso/img_dev/Users /new_root/Users
 
     mount --bind /run/archiso/img_dev/Apps /new_root/Apps
+
+    mount --bind /run/archiso/img_dev/Extensions /new_root/Extensions
 
     mount -t overlay -o lowerdir=/run/archiso/sfs/airootfs/etc,upperdir=/run/archiso/img_dev/Settings,workdir=/run/archiso/img_dev/Work/Settings overlay /new_root/etc
 

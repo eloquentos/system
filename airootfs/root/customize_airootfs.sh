@@ -20,8 +20,6 @@ sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
 glib-compile-schemas /usr/share/glib-2.0/schemas/
 
-pacman -Sy
-
 systemctl enable pacman-init.service choose-mirror.service
 systemctl enable gdm.service
 systemctl enable NetworkManager.service

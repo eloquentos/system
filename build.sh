@@ -240,17 +240,26 @@ done
 
 mkdir -p ${work_dir}
 
+cp -v ${script_path}/pacmanx86_64.conf ${work_dir}/pacman.conf
 run_once make_pacman_conf
 
 # Do all stuff for each airootfs
-for arch in i686 x86_64; do
+for arch in x86_64; do
     run_once make_basefs
     run_once make_packages
+    run_once make_packages_efi
+    run_once make_setup_mkinitcpio
+    run_once make_customize_airootfs
 done
 
-run_once make_packages_efi
+echo make_pacman_conf i686
+cp -v ${script_path}/pacmani686.conf ${work_dir}/pacman.conf
 
-for arch in i686 x86_64; do
+
+for arch in i686; do
+    run_once make_basefs
+    run_once make_packages
+    run_once make_packages_efi
     run_once make_setup_mkinitcpio
     run_once make_customize_airootfs
 done

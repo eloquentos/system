@@ -23,6 +23,8 @@ gnome-shell-extension-nohotcorner
 gnome-shell-extension-dash-to-dock
 
 # Base
+qt4
+qt5
 lvm2
 xdg-user-dirs
 wine

@@ -18,6 +18,25 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
+rm /usr/share/applications/assistant.desktop
+rm /usr/share/applications/assistant-qt4.desktop
+rm /usr/share/applications/bssh.desktop
+rm /usr/share/applications/bvnc.desktop
+rm /usr/share/applications/cups.desktop
+rm /usr/share/applications/designer.desktop
+rm /usr/share/applications/designer-qt4.desktop
+rm /usr/share/applications/elinks.desktop
+rm /usr/share/applications/linguist.desktop
+rm /usr/share/applications/linguist-qt4.desktop
+rm /usr/share/applications/qdbusviewer.desktop
+rm /usr/share/applications/qdbusviewer-qt4.desktop
+rm /usr/share/applications/qtconfig-qt4.desktop
+rm /usr/share/applications/qv4l2.desktop
+rm /usr/share/applications/tracker-needle.desktop
+rm /usr/share/applications/tracker-preferences.desktop
+rm /usr/share/applications/zenmap.desktop
+rm /usr/share/applications/zenmap-root.desktop
+
 glib-compile-schemas /usr/share/glib-2.0/schemas/
 
 systemctl enable pacman-init.service choose-mirror.service

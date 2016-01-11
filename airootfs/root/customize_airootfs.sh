@@ -18,6 +18,7 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
+rm /usr/share/applications/avahi-discover.desktop
 rm /usr/share/applications/assistant.desktop
 rm /usr/share/applications/assistant-qt4.desktop
 rm /usr/share/applications/bssh.desktop

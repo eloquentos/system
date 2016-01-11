@@ -37,6 +37,10 @@ rm /usr/share/applications/tracker-preferences.desktop
 rm /usr/share/applications/zenmap.desktop
 rm /usr/share/applications/zenmap-root.desktop
 
+gsettings set org.gnome.desktop.app-folders folder-children "['System']"
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/System/ name 'System'
+gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/System/ apps "['gnome-terminal.desktop', 'org.gnome.font-viewer.desktop', 'seahorse.desktop', 'gnome-system-log.desktop', 'gnome-system-monitor.desktop', 'gnome-system-monitor-kde.desktop', 'org.gnome.FileRoller.desktop', 'org.gnome.DiskUtility.desktop']"
+
 glib-compile-schemas /usr/share/glib-2.0/schemas/
 
 systemctl enable pacman-init.service choose-mirror.service

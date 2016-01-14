@@ -75,6 +75,8 @@ make_setup_mkinitcpio() {
         cp /usr/lib/initcpio/hooks/${_hook} ${work_dir}/${arch}/airootfs/etc/initcpio/hooks
         cp /usr/lib/initcpio/install/${_hook} ${work_dir}/${arch}/airootfs/etc/initcpio/install
     done
+    
+    cp ${script_path}/airootfs/etc/os-release ${work_dir}/${arch}/airootfs/etc
 
     cp ${script_path}/initcpio/hooks/* ${work_dir}/${arch}/airootfs/etc/initcpio/hooks
     cp ${script_path}/initcpio/install/* ${work_dir}/${arch}/airootfs/etc/initcpio/install

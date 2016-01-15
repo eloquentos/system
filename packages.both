@@ -35,7 +35,6 @@ wine_gecko
 cups
 xorg
 virtualbox-guest-utils
-gdm
 gnome-shell
 gnome-shell-extensions
 gnome-online-accounts

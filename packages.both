@@ -32,6 +32,13 @@ xdg-user-dirs
 wine
 wine-mono
 wine_gecko
+lib32-libpulse
+lib32-openal
+lib32-libxml2
+lib32-mpg123
+lib32-lcms2
+lib32-giflib
+lib32-libpng
 cups
 xorg
 virtualbox-guest-utils

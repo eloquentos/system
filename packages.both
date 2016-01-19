@@ -23,6 +23,13 @@ gnome-shell-extension-nohotcorner
 gnome-shell-extension-dash-to-dock
 
 # Base
+libpulse
+openal
+libxml2
+mpg123
+lcms2
+giflib
+libpng
 plymouth
 gdm-plymouth
 qt4

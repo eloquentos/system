@@ -44,6 +44,8 @@ gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folder
 
 glib-compile-schemas /usr/share/glib-2.0/schemas/
 
+chown -R 0:0 /etc/sudoers.d
+
 systemctl enable pacman-init.service choose-mirror.service
 systemctl enable gdm-plymouth.service
 systemctl enable NetworkManager.service

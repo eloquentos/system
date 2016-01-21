@@ -24,6 +24,7 @@ gnome-shell-extension-nohotcorner
 gnome-shell-extension-dash-to-dock
 
 # Base
+ttf-liberation
 libpulse
 openal
 libxml2

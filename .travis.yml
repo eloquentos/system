@@ -6,4 +6,4 @@ services:
 before_install:
     - docker pull pritunl/archlinux
 
-script: 'docker run -i -v ${PWD}:/mnt pritunl/archlinux /bin/sh -c "cd /mnt && sudo ./build.sh -v'
+script: 'docker run -i -v ${PWD}:/mnt pritunl/archlinux /bin/sh -c "cd /mnt && sudo ./build.sh -v"'

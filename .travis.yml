@@ -6,6 +6,7 @@ services:
 before_install:
     - docker pull pritunl/archlinux
     - docker run --name eloquentos -v ${PWD}:/mnt pritunl/archlinux /bin/bash
+    - docker start eloquentos
     - docker exec -d eloquentos 'pacman -Sy archiso'
 
 script: docker exec -d eloquentos '/bin/sh -c "cd /mnt && ./build.sh -v"'

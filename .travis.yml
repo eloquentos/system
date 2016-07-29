@@ -1,11 +1,9 @@
 sudo: required
 
-arch:
-  packages:
-    - archiso
-  script:
-    - "sudo pacman-key --init"
-    - "sudo ./build.sh -v"
+services:
+  - docker
 
-script:
-  - "curl -s https://raw.githubusercontent.com/mikkeloscar/arch-travis/master/arch-travis.sh | bash"
+before_install:
+    - docker pull pritunl/archlinux
+
+script: 'docker run -i -v ${PWD}:/mnt pritunl/archlinux /bin/sh -c "cd /mnt && sudo ./build.sh -v'

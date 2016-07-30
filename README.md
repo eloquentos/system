@@ -1,5 +1,7 @@
 # Eloquent OS System Image
 
+[![Build Status](https://travis-ci.org/eloquentos/system.svg)](https://travis-ci.org/eloquentos/system)
+
 Copyright (c) 2016 Nimbusoft Ltd
 
 Eloquent OS system image (ISO) used for booting.

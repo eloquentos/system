@@ -46,6 +46,9 @@ glib-compile-schemas /usr/share/glib-2.0/schemas/
 
 chown -R 0:0 /etc/sudoers.d
 
+rm /usr/share/gnome-shell/gnome-shell-theme.gresource
+cp /usr/share/themes/Flat-Plat/gnome-shell/gnome-shell-theme.gresource /usr/share/gnome-shell
+
 systemctl enable pacman-init.service choose-mirror.service
 systemctl enable gdm-plymouth.service
 systemctl enable NetworkManager.service

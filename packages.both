@@ -32,7 +32,7 @@ lcms2
 giflib
 libpng
 plymouth
-#gdm-plymouth
+gdm-plymouth
 qt4
 qt5
 lvm2

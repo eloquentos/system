@@ -10,10 +10,10 @@ show-desktop-icons=true
 button-layout=":minimize,maximize,close"
 
 [org.gnome.desktop.interface]
-gtk-theme="Eloquent"
+gtk-theme="Flat-Plat"
 
 [org.gnome.shell.extensions.user-theme]
-name="Eloquent"
+name="Flat-Plat"
 
 [org.gnome.shell]
 enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'nohotcorner@azuri.free.fr', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']

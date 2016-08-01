@@ -31,7 +31,7 @@ mpg123
 lcms2
 giflib
 libpng
-#plymouth
+plymouth
 #gdm-plymouth
 qt4
 qt5

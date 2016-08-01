@@ -6,8 +6,9 @@ services:
 before_install:
     - docker pull pritunl/archlinux
     - docker run --name eloquentos -itd --privileged -v ${PWD}:/mnt pritunl/archlinux /bin/bash
-    - docker exec eloquentos pacman -S archiso --noconfirm
+    - docker exec eloquentos pacman -S archiso expect --noconfirm
     - docker exec eloquentos gpg --import /mnt/sign-key
+    - docker exec eloquentos /mnt/trust-key eloquentos@nimbusoft.co.uk
     - docker exec eloquentos mkdir /run/shm
 
 script: docker exec eloquentos /bin/sh -c "cd /mnt && ./build.sh -v"

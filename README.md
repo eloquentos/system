@@ -1,6 +1,6 @@
 # Eloquent OS System Image
 
-[![Build Status](https://travis-ci.org/eloquentos/system.svg)](https://travis-ci.org/eloquentos/system)
+[![Build Status](https://travis-ci.org/eloquentos/system.svg)](https://travis-ci.org/eloquentos/system)  [![SourceForge](https://img.shields.io/sourceforge/dm/eloquentos.svg?maxAge=2592000)](https://sourceforge.net/projects/eloquentos/files/system/releases/)
 
 Copyright (c) 2016 Nimbusoft Ltd
 

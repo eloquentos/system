@@ -4,7 +4,7 @@ set -e -u
 
 iso_name=eloquentos
 iso_label="ELOQUENTOS_$(date +%Y%m)"
-iso_version=$(date +%Y.%m.%d)
+iso_version=$(date +%Y%m%d%H%M)
 install_dir=eloquent
 work_dir=work
 out_dir=out

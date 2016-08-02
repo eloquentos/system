@@ -210,7 +210,47 @@ make_prepare() {
 
 # Build ISO
 make_iso() {
-    mkarchiso ${verbose} -w "${work_dir}" -D "${install_dir}" -L "${iso_label}" -o "${out_dir}" iso "${iso_version}.iso"
+    # launch command in the background
+    mkarchiso ${verbose} -w "${work_dir}" -D "${install_dir}" -L "${iso_label}" -o "${out_dir}" iso "${iso_version}.iso" &
+
+    # ping every second
+    seconds=0
+    limit=60*60
+    while kill -0 $! >/dev/null 2>&1;
+    do
+        echo -n -e " \b" # never leave evidence
+
+        if [ $seconds == $limit ]; then
+            break;
+        fi
+
+        seconds=$((seconds + 1))
+
+        sleep 1
+    done
+}
+
+ticker() {
+    command=$1
+
+    # launch command in the background
+    ${command} &
+
+    # ping every second
+    seconds=0
+    limit=40*60
+    while kill -0 $! >/dev/null 2>&1;
+    do
+        echo -n -e " \b" # never leave evidence
+
+        if [ $seconds == $limit ]; then
+            break;
+        fi
+
+        seconds=$((seconds + 1))
+
+        sleep 1
+    done
 }
 
 if [[ ${EUID} -ne 0 ]]; then

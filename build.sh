@@ -210,15 +210,16 @@ make_prepare() {
 
 # Build ISO
 make_iso() {
-    # launch command in the background
+    # make iso in the background
     mkarchiso ${verbose} -w "${work_dir}" -D "${install_dir}" -L "${iso_label}" -o "${out_dir}" iso "${iso_version}.iso" &
 
     # ping every second
     seconds=0
     limit=60*60
+
     while kill -0 $! >/dev/null 2>&1;
     do
-        echo -n -e " \b" # never leave evidence
+        echo -n -e "Building iso, please wait...\n"
 
         if [ $seconds == $limit ]; then
             break;

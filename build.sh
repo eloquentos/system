@@ -205,21 +205,21 @@ make_prepare() {
     setarch ${arch} mkarchiso ${verbose} -w "${work_dir}" -D "${install_dir}" pkglist
     setarch ${arch} mkarchiso ${verbose} -w "${work_dir}" -D "${install_dir}" prepare &
 
-    # ping every second
-    seconds=0
-    limit=60*60
+    # ping every minute
+    mins=0
+    limit=60
 
     while kill -0 $! >/dev/null 2>&1;
     do
         echo -n -e "Creating SquashFS image, please wait...\n"
 
-        if [ $seconds == $limit ]; then
+        if [ $mins == $limit ]; then
             break;
         fi
 
-        seconds=$((seconds + 1))
+        mins=$((mins + 1))
 
-        sleep 1
+        sleep 60
     done
 
     rm -rf ${work_dir}/airootfs

@@ -18,25 +18,25 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
-rm /usr/share/applications/avahi-discover.desktop
-rm /usr/share/applications/assistant.desktop
-rm /usr/share/applications/assistant-qt4.desktop
-rm /usr/share/applications/bssh.desktop
-rm /usr/share/applications/bvnc.desktop
-rm /usr/share/applications/cups.desktop
-rm /usr/share/applications/designer.desktop
-rm /usr/share/applications/designer-qt4.desktop
-rm /usr/share/applications/elinks.desktop
-rm /usr/share/applications/linguist.desktop
-rm /usr/share/applications/linguist-qt4.desktop
-rm /usr/share/applications/qdbusviewer.desktop
-rm /usr/share/applications/qdbusviewer-qt4.desktop
-rm /usr/share/applications/qtconfig-qt4.desktop
-rm /usr/share/applications/qv4l2.desktop
-rm /usr/share/applications/tracker-needle.desktop
-rm /usr/share/applications/tracker-preferences.desktop
-rm /usr/share/applications/zenmap.desktop
-rm /usr/share/applications/zenmap-root.desktop
+rm -f /usr/share/applications/avahi-discover.desktop
+rm -f /usr/share/applications/assistant.desktop
+rm -f /usr/share/applications/assistant-qt4.desktop
+rm -f /usr/share/applications/bssh.desktop
+rm -f /usr/share/applications/bvnc.desktop
+rm -f /usr/share/applications/cups.desktop
+rm -f /usr/share/applications/designer.desktop
+rm -f /usr/share/applications/designer-qt4.desktop
+rm -f /usr/share/applications/elinks.desktop
+rm -f /usr/share/applications/linguist.desktop
+rm -f /usr/share/applications/linguist-qt4.desktop
+rm -f /usr/share/applications/qdbusviewer.desktop
+rm -f /usr/share/applications/qdbusviewer-qt4.desktop
+rm -f /usr/share/applications/qtconfig-qt4.desktop
+rm -f /usr/share/applications/qv4l2.desktop
+rm -f /usr/share/applications/tracker-needle.desktop
+rm -f /usr/share/applications/tracker-preferences.desktop
+rm -f /usr/share/applications/zenmap.desktop
+rm -f /usr/share/applications/zenmap-root.desktop
 
 gsettings set org.gnome.desktop.app-folders folder-children "['System']"
 gsettings set org.gnome.desktop.app-folders.folder:/org/gnome/desktop/app-folders/folders/System/ name 'System'

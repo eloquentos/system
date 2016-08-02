@@ -11,6 +11,7 @@ button-layout=":minimize,maximize,close"
 
 [org.gnome.desktop.interface]
 gtk-theme="Flat-Plat"
+icon-theme="Paper"
 
 [org.gnome.shell.extensions.user-theme]
 name="Flat-Plat"

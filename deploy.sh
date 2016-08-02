@@ -7,8 +7,9 @@ fi
 
 sshpass -e sftp -oBatchMode=no -oStrictHostKeyChecking=no -b - nimbusoft@frs.sourceforge.net << !
    cd /home/pfs/project/eloquentos/system/releases
+   put out/*.iso new.iso
    rm old.iso
    rename current.iso old.iso
-   put out/*.iso current.iso
+   rename new.iso current.iso
    bye
 !

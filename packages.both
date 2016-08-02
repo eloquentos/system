@@ -42,7 +42,7 @@ wine-mono
 wine_gecko
 cups
 xorg
-virtualbox-guest-utils
+#virtualbox-guest-utils
 gnome-shell
 gnome-shell-extensions
 gnome-online-accounts

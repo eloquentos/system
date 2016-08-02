@@ -203,15 +203,7 @@ make_efiboot() {
 make_prepare() {
     cp -a -l -f ${work_dir}/${arch}/airootfs ${work_dir}
     setarch ${arch} mkarchiso ${verbose} -w "${work_dir}" -D "${install_dir}" pkglist
-    setarch ${arch} mkarchiso ${verbose} -w "${work_dir}" -D "${install_dir}" prepare
-    rm -rf ${work_dir}/airootfs
-    # rm -rf ${work_dir}/${arch}/airootfs (if low space, this helps)
-}
-
-# Build ISO
-make_iso() {
-    # make iso in the background
-    mkarchiso ${verbose} -w "${work_dir}" -D "${install_dir}" -L "${iso_label}" -o "${out_dir}" iso "${iso_version}.iso" &
+    setarch ${arch} mkarchiso ${verbose} -w "${work_dir}" -D "${install_dir}" prepare &
 
     # ping every second
     seconds=0
@@ -219,7 +211,7 @@ make_iso() {
 
     while kill -0 $! >/dev/null 2>&1;
     do
-        echo -n -e "Building iso, please wait...\n"
+        echo -n -e "Creating SquashFS image, please wait...\n"
 
         if [ $seconds == $limit ]; then
             break;
@@ -229,29 +221,14 @@ make_iso() {
 
         sleep 1
     done
+
+    rm -rf ${work_dir}/airootfs
+    # rm -rf ${work_dir}/${arch}/airootfs (if low space, this helps)
 }
 
-ticker() {
-    command=$1
-
-    # launch command in the background
-    ${command} &
-
-    # ping every second
-    seconds=0
-    limit=40*60
-    while kill -0 $! >/dev/null 2>&1;
-    do
-        echo -n -e " \b" # never leave evidence
-
-        if [ $seconds == $limit ]; then
-            break;
-        fi
-
-        seconds=$((seconds + 1))
-
-        sleep 1
-    done
+# Build ISO
+make_iso() {
+    mkarchiso ${verbose} -w "${work_dir}" -D "${install_dir}" -L "${iso_label}" -o "${out_dir}" iso "${iso_version}.iso"
 }
 
 if [[ ${EUID} -ne 0 ]]; then

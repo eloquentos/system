@@ -38,6 +38,7 @@ plymouth
 gdm-plymouth
 gtk2
 gtk3
+gconf
 qt4
 qt5
 lvm2

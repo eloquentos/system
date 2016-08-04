@@ -6,19 +6,6 @@ Copyright (c) 2016 Nimbusoft Ltd
 
 Eloquent OS system image (ISO) used for booting.
 
-
-## Building
-
-You can build the image on an Arch Linux based distro with the archiso package which can be installed with pacman.
-
-```bash
-sudo ./build.sh -v
-```
-
-The newly build ISO will be built into the ```out``` directory.
-
-Note: Chances are, the built ISO will not be bootable by itself. The ISO is designed to be loop-mounted with GRUB and overlayed with directories on the hard disk in our initramfs.
-
 ## Installing Manually
 
 Eloquent OS is in very early development stages, as such, until the installer is ready, we must install Eloquent OS manually. Bear in mind that things probably will break, so if you're not comfortable with the potential of losing data from your machine, then proceed no further. If you know the risks and want to give Eloquent OS a spin, then please read the following instructions carefully and open an issue if you have any problems.
@@ -88,3 +75,29 @@ Eloquent OS can now generate the grub config for you, to do this, run the follow
 ### Reboot and enjoy!
 
 You should now be ready to boot into Eloquent OS. Reboot your machine and you should now be greeted by Eloquent OS. If you have any issues or feedback, then please open an issue.
+
+## Upgrading
+
+To upgrade Eloquent OS to the latest build, you need to run the following command in your Eloquent OS system.
+
+```
+sudo rm -f /mnt/System/Images/old.iso
+sudo mv /mnt/System/Images/eloquentos.iso /mnt/System/Images/old.iso
+sudo wget https://sourceforge.net/projects/eloquentos/files/system/releases/current.iso/download -O /mnt/System/Images/eloquentos.iso
+```
+
+## Development
+
+You can build the image on an Arch Linux based distro with the archiso package which can be installed with pacman.
+
+To build Eloquent OS, run the following command.
+
+```bash
+sudo ./build.sh -v
+```
+
+The newly build ISO will be built into the ```out``` directory.
+
+## Contributing
+
+We welcome all contributions, no matter how big or small. If you have ideas or bug reports, then please open an issue or submit a pull request.

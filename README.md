@@ -21,7 +21,7 @@ Note: Chances are, the built ISO will not be bootable by itself. The ISO is desi
 
 ## Installing Manually
 
-Eloquent OS is pretty easy to install manually. The following instructions will guide you through the process.
+Eloquent OS is in very early development stages, as such, until the installer is ready, we must install Eloquent OS manually. Bear in mind that things probably will break, so if you're not comfortable with the potential of losing data from your machine, then proceed no further. If you know the risks and want to give Eloquent OS a spin, then please read the following instructions carefully and open an issue if you have any problems.
 
 ### Downloading the base iso
 

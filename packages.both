@@ -26,6 +26,8 @@ paper-icon-theme-git
 gnome-shell-extension-dash-to-dock
 
 # Base
+snapd
+flatpak
 ttf-liberation
 libpulse
 openal

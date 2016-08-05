@@ -53,4 +53,3 @@ systemctl enable pacman-init.service choose-mirror.service
 systemctl enable gdm-plymouth.service
 systemctl enable NetworkManager.service
 systemctl enable org.cups.cupsd.service
-systemctl enable snapd.refresh.timer

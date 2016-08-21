@@ -24,6 +24,7 @@ orca
 flatplat-theme
 paper-icon-theme-git
 gnome-shell-extension-dash-to-dock
+gnome-shell-extension-workspaces-to-dock
 
 # Base
 flatpak

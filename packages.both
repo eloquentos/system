@@ -27,6 +27,7 @@ gnome-shell-extension-dash-to-dock
 gnome-shell-extension-workspaces-to-dock
 
 # Base
+snapd
 flatpak
 ttf-liberation
 libpulse

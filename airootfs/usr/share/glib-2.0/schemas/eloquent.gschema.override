@@ -16,5 +16,19 @@ icon-theme="Paper"
 [org.gnome.shell.extensions.user-theme]
 name="Flat-Plat"
 
+[org.gnome.shell.extensions.workspaces-to-dock]
+dashtodock-hover=false
+disable-scroll=false
+dock-edge-visible=false
+dock-fixed=false
+dock-position='BOTTOM'
+hide-dash=true
+intellihide=false
+opaque-background=false
+quick-show-on-workspace-change=false
+show-shortcuts-panel=false
+toggle-overview=false
+workspace-captions=false
+
 [org.gnome.shell]
 enabled-extensions=['dash-to-dock@micxgx.gmail.com', 'workspaces-to-dock@passingthru67.gmail.com', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'user-theme@gnome-shell-extensions.gcampax.github.com']

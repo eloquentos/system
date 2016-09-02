@@ -57,15 +57,16 @@ gnome-shell-extensions
 gnome-online-accounts
 gnome-getting-started-docs
 gnome-initial-setup
-nautilus
 gnome-user-docs
-cheese
 gnome-keyring
 gnome-bluetooth
 gnome-control-center
 gnome-user-share
-file-roller
 gnome-backgrounds
+nautilus
+sushi
+cheese
+file-roller
 vino
 rygel
 

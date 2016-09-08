@@ -63,6 +63,7 @@ gnome-bluetooth
 gnome-control-center
 gnome-user-share
 samba
+gvfs-smb
 gnome-backgrounds
 nautilus
 sushi

@@ -27,6 +27,9 @@ paper-icon-theme-git
 gnome-shell-extension-dash-to-dock
 gnome-shell-extension-workspaces-to-dock
 
+# Drivers
+hplip
+
 # Base
 snapd
 flatpak

@@ -1,31 +1,8 @@
 # Included apps
-gedit
-gnome-calculator
-gnome-calendar
-gnome-contacts
-gnome-disk-utility
-gnome-documents
-gnome-font-viewer
-gnome-logs
-gnome-maps
-gnome-music
-gnome-photos
-gnome-system-log
-gnome-system-monitor
-gnome-terminal
-gnome-weather
+plasma
+kde-applications
 simple-scan
 firefox
-totem
-bijiben
-seahorse
-orca
-
-# Eloqeunt
-flatplat-theme
-paper-icon-theme-git
-gnome-shell-extension-dash-to-dock
-gnome-shell-extension-workspaces-to-dock
 
 # Drivers
 hplip
@@ -41,8 +18,7 @@ mpg123
 lcms2
 giflib
 libpng
-plymouth
-gdm-plymouth
+sddm
 gtk2
 gtk3
 gconf
@@ -57,23 +33,8 @@ wine_gecko
 cups
 xorg
 #virtualbox-guest-utils
-gnome-shell
-gnome-shell-extensions
-gnome-online-accounts
-gnome-getting-started-docs
-gnome-initial-setup
-gnome-user-docs
-gnome-keyring
-gnome-bluetooth
-gnome-control-center
-gnome-user-share
 samba
 gvfs-smb
-gnome-backgrounds
-nautilus
-sushi
-cheese
-file-roller
 vino
 rygel
 

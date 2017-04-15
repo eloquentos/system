@@ -1,0 +1,21 @@
+image: gitlab/dind
+
+build:
+    before_script:
+        - docker pull pritunl/archlinux
+        - docker run --name eloquentos -itd --privileged -v ${PWD}:/mnt pritunl/archlinux /bin/bash
+        - docker exec eloquentos cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
+        - docker exec eloquentos sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup
+        - docker exec eloquentos /bin/sh -c "rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist"
+        - docker exec eloquentos pacman -S archiso --noconfirm
+        - docker exec eloquentos pacman-key --add /mnt/sign-key
+        - docker exec eloquentos pacman-key --lsign-key eloquentos@nimbusoft.co.uk
+        - docker exec eloquentos mkdir /run/shm
+
+    script:
+        - docker exec eloquentos /bin/sh -c "cd /mnt && ./build.sh -v"
+        
+    after_script:
+        - sudo apt-get update
+        - sudo apt-get install -y sshpass
+        - ./deploy.sh

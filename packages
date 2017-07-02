@@ -7,6 +7,15 @@ firefox
 # Drivers
 hplip
 
+# i686 Support
+lib32-libpulse
+lib32-openal
+lib32-libxml2
+lib32-mpg123
+lib32-lcms2
+lib32-giflib
+lib32-libpng
+
 # Base
 snapd
 flatpak

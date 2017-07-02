@@ -144,7 +144,8 @@ make_prepare() {
 
 # Build ISO
 make_iso() {
-    mkarchiso ${verbose} -w "${work_dir}" -D "${install_dir}" -L "${iso_label}" -o "${out_dir}" iso "${iso_version}.iso"
+    mkdir -p "${out_dir}"
+    mkisofs -R -V "${iso_label}" -o "${out_dir}/${iso_version}.iso" "${work_dir}/iso"
 }
 
 if [[ ${EUID} -ne 0 ]]; then

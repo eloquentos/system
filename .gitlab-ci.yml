@@ -7,7 +7,7 @@ build:
         - docker exec eloquentos cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
         - docker exec eloquentos sed -i 's/^#Server/Server/' /etc/pacman.d/mirrorlist.backup
         - docker exec eloquentos /bin/sh -c "rankmirrors -n 6 /etc/pacman.d/mirrorlist.backup > /etc/pacman.d/mirrorlist"
-        - docker exec eloquentos pacman -S archiso mkisofs --noconfirm
+        - docker exec eloquentos pacman -S archiso cdrkit --noconfirm
         - docker exec eloquentos pacman-key --add /mnt/sign-key
         - docker exec eloquentos pacman-key --lsign-key eloquentos@nimbusoft.co.uk
         - docker exec eloquentos mkdir /run/shm

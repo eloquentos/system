@@ -15,7 +15,7 @@ build:
     script:
         - docker exec eloquentos /bin/sh -c "cd /mnt && ./build.sh -v"
         
-    after_script:
-        - sudo apt-get update
-        - sudo apt-get install -y sshpass
-        - ./deploy.sh
+    artifacts:
+        paths:
+            - out/*
+        expire_in: 1 week

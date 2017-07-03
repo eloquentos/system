@@ -2,8 +2,6 @@
 
 [![build status](https://gitlab.com/nimbusoft/eloquentos/system/badges/master/build.svg)](https://gitlab.com/nimbusoft/eloquentos/system/commits/master) [![SourceForge](https://img.shields.io/sourceforge/dm/eloquentos.svg?maxAge=2592000)](https://sourceforge.net/projects/eloquentos/files/system/releases/)
 
-Copyright (c) 2016 Nimbusoft Ltd
-
 Eloquent OS system image (ISO) used for booting.
 
 ## Installing Manually

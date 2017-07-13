@@ -2,7 +2,8 @@ build:
     image: gitlab/dind
 
     before_script:
-        - apt install -y sshpass
+        - apt-get update
+        - apt-get install -y sshpass
         - docker pull pritunl/archlinux
         - docker run --name eloquentos -itd --privileged -v ${PWD}:/mnt pritunl/archlinux /bin/bash
         - docker exec eloquentos cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
@@ -32,7 +33,8 @@ release:
         - tags
 
     before_script:
-        - apt install -y sshpass
+        - apt-get update
+        - apt-get install -y sshpass
 
     script: ./release.sh
 

@@ -21,5 +21,6 @@ deploy:
 release:
     stage: deploy
     when: manual
-    only: tags
+    only:
+        - tags
     script: ./release.sh

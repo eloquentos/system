@@ -1,6 +1,9 @@
-image: gitlab/dind
+before_script:
+    - apt install -y sshpass
 
 build:
+    image: gitlab/bind
+
     before_script:
         - docker pull pritunl/archlinux
         - docker run --name eloquentos -itd --privileged -v ${PWD}:/mnt pritunl/archlinux /bin/bash
@@ -15,8 +18,8 @@ build:
     script:
         - docker exec eloquentos /bin/sh -c "cd /mnt && ./build.sh -v"
 
-deploy:
-    script: ./deploy.sh
+    after_success:
+        - ./deploy.sh
 
 release:
     stage: deploy

@@ -22,7 +22,7 @@ build:
 
     environment:
         name: ci
-        url: https://sourceforge.net/projects/eloquentos/files/ci/$CI_PIPELINE_ID/download
+        url: https://sourceforge.net/projects/eloquentos/files/ci/$CI_PIPELINE_ID.iso/download
 
 release:
     stage: deploy
@@ -40,4 +40,4 @@ release:
 
     environment:
         name: release
-        url: https://sourceforge.net/projects/eloquentos/files/releases/$CI_COMMIT_TAG/download
+        url: https://sourceforge.net/projects/eloquentos/files/releases/$CI_COMMIT_TAG.iso/download

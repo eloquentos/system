@@ -2,7 +2,7 @@ before_script:
     - apt install -y sshpass
 
 build:
-    image: gitlab/bind
+    image: gitlab/dind
 
     before_script:
         - docker pull pritunl/archlinux

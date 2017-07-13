@@ -14,8 +14,12 @@ build:
 
     script:
         - docker exec eloquentos /bin/sh -c "cd /mnt && ./build.sh -v"
-        
-    artifacts:
-        paths:
-            - out/*
-        expire_in: 1 week
+
+deploy:
+    script: ./deploy.sh
+
+release:
+    stage: deploy
+    when: manual
+    only: tags
+    script: ./release.sh

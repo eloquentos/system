@@ -1,10 +1,8 @@
-before_script:
-    - apt install -y sshpass
-
 build:
     image: gitlab/dind
 
     before_script:
+        - apt install -y sshpass
         - docker pull pritunl/archlinux
         - docker run --name eloquentos -itd --privileged -v ${PWD}:/mnt pritunl/archlinux /bin/bash
         - docker exec eloquentos cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
@@ -21,9 +19,23 @@ build:
     after_script:
         - ./deploy.sh
 
+    environment:
+        name: ci
+        url: https://sourceforge.net/projects/eloquentos/files/ci/$CI_PIPELINE_ID/download
+
 release:
     stage: deploy
+
     when: manual
+
     only:
         - tags
+
+    before_script:
+        - apt install -y sshpass
+
     script: ./release.sh
+
+    environment:
+        name: release
+        url: https://sourceforge.net/projects/eloquentos/files/releases/$CI_COMMIT_TAG/download
